@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const Home = () => {
   return (
-    <main className="flex text-5xl ">
-      <h1>test</h1>
+    <main className="flex items-center justify-center w-full h-full bg-violet-200">
+      <h1>home</h1>
     </main>
   );
 };

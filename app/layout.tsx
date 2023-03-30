@@ -19,7 +19,9 @@ function RootLayout({ children }: LayoutProps) {
     <html lang="en">
       <body className={`${caveat.variable} font-sans`}>
         <MenuBar />
-        <div className="p-2 h-[calc(100vh-100px)]">{children}</div>
+        <div className="flex justify-center items-center h-[calc(100vh-100px)]">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
