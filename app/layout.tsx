@@ -1,11 +1,12 @@
-import { Caveat } from "next/font/google";
 import "./globals.css";
+import { Caveat } from "next/font/google";
 import LayoutProps from "@/types/LayoutProps";
 import MenuBar from "@/components/MenuBar";
 import Footer from "@/components/Footer";
 
 const caveat = Caveat({
   subsets: ["latin"],
+  display: "swap",
   variable: "--font-caveat",
 });
 

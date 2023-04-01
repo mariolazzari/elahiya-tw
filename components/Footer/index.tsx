@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="h-[50px] bg-gradient-to-tr from-violet-400 to-indigo-400 flex justify-center items-center">
       <a href="https://mariolazzari.it" target="_blank">
         <h6 className="text-xl font-bold text-white hover:animate-bounce">
-          Mario Lazzari
+          © Mario Lazzari {new Date().getFullYear()}
         </h6>
       </a>
     </div>
