@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Options from "./Options";
+import Logo from "@/public/images/elahiya.jpg";
 
 interface DrawerProps {
   open: boolean;
@@ -12,10 +14,11 @@ function Drawer({ open, onClose }: DrawerProps) {
 
   return (
     <div
-      className="absolute top-0 right-0 z-40 w-40 h-screen p-4 bg-gradient-to-bl from-violet-400 to-indigo-400"
+      className="absolute top-0 right-0 z-40 w-40 h-screen p-4 bg-gradient-to-br from-violet-400 to-indigo-400"
       onClick={onClose}
       onMouseLeave={onClose}
     >
+      <Image className="mb-10 rounded-full" src={Logo} alt="Elahiya" />
       <Options isDrawer />
     </div>
   );
