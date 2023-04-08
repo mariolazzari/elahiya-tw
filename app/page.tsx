@@ -5,15 +5,15 @@ import Buttons from "@/components/Buttons";
 
 const Home = () => {
   return (
-    <main className="flex flex-col items-center justify-center w-full h-full p-2 bg-gradient-to-br from-violet-100 via-indigo-300 to-purple-300">
+    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-100px)] overflow-y-auto p-2 bg-gradient-to-br from-violet-100 via-indigo-300 to-purple-300">
       <Image src={Logo} alt="Elahiya" />
-      <h1 className="my-8 text-5xl font-bold text-purple-800">
+      <h1 className="my-4 font-bold text-center text-purple-800 text-7xl">
         Fly your dreams with us
       </h1>
 
       <Socials />
       <Buttons />
-    </main>
+    </div>
   );
 };
 
