@@ -13,7 +13,9 @@ const Manubar = () => {
       <nav className="h-[50px] bg-gradient-to-bl from-indigo-400 to-violet-400 flex justify-between items-center px-4">
         <Locales />
 
-        <Options />
+        <div className="invisible md:visible">
+          <Options />
+        </div>
 
         <GiHamburgerMenu
           className="hover:animate-spin"
