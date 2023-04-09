@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const Buttons = () => {
-  const style = "w-32 px-5 py-2 text-2xl text-white rounded-xl";
+  const style = "w-32 px-5 py-2 text-xl text-white rounded-xl";
   const buttons = [
     {
       link: "/about",

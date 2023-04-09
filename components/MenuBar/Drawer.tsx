@@ -14,7 +14,7 @@ function Drawer({ open, onClose }: DrawerProps) {
 
   return (
     <div
-      className="absolute top-0 right-0 z-40 w-40 h-screen p-4 bg-gradient-to-br from-violet-400 to-indigo-400"
+      className="absolute top-0 right-0 z-40 w-40 h-screen p-4 bg-gradient-to-br from-purple-400 via-indigo-400 to-violet-400"
       onClick={onClose}
       onMouseLeave={onClose}
     >

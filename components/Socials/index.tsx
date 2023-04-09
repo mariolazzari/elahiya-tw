@@ -50,10 +50,11 @@ const Socials = () => {
       {socials.map(social => (
         <div
           key={social.id}
-          className="flex p-1 cursor-pointer"
+          className="flex p-1 cursor-pointer hover:scale-110"
           onClick={() => onClick(social.url)}
         >
-          {social.icon} <h2 className="ml-2 text-xl">{social.name}</h2>
+          {social.icon}
+          <h2 className="ml-2 text-xl text-indigo-900">{social.name}</h2>
         </div>
       ))}
     </div>

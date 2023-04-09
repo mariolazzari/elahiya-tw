@@ -7,14 +7,17 @@ const About = () => {
         key={id}
         title="title"
         description="description"
-        imagePath={`/images/about/card${id}.jpg`}
+        imagePath={`/images/card${id}.jpg`}
       />
     ));
 
   return (
-    <div className="flex flex-col items-center w-full h-full overflow-auto bg-gradient-to-tr from-violet-200 to-indigo-200">
-      <h1 className="my-10 text-xl font-bold text-violet-700">About</h1>
-      <div className="flex flex-wrap items-center justify-center gap-2">
+    <div className="flex flex-col items-center justify-center w-full min-h-[calc(100vh-100px)] p-2 overflow-auto bg-gradient-to-br from-violet-300 via-indigo-300 to-purple-300">
+      <div className="p-2 my-4 rounded bg-violet-100">
+        <h1 className="text-xl font-semibold text-indigo-800">About</h1>
+      </div>
+
+      <div className="flex flex-wrap items-center justify-center gap-4">
         {renderImages()}
       </div>
     </div>

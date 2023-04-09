@@ -1,11 +1,11 @@
 import { ImSpinner3 } from "react-icons/im";
 
-const loading = () => {
+const Loading = () => {
   return (
-    <>
-      <ImSpinner3 color="purple" size={64} />
-    </>
+    <div className="flex items-center justify-center w-screen h-screen">
+      <ImSpinner3 className="animate-spin" color="purple" size={64} />
+    </div>
   );
 };
 
-export default loading;
+export default Loading;

@@ -26,11 +26,13 @@ const Options = ({ isDrawer = false }) => {
   return (
     <div className={className}>
       {options.map(opt => (
-        <Link className="flex items-center" key={opt.url} href={opt.url}>
+        <Link
+          className="flex items-center hover:scale-110"
+          key={opt.url}
+          href={opt.url}
+        >
           {opt.icon}
-          <h6 className="ml-1 text-xl font-bold text-white hover:animate-bounce">
-            {opt.label}
-          </h6>
+          <h6 className="ml-1 text-xl font-bold text-white">{opt.label}</h6>
         </Link>
       ))}
     </div>

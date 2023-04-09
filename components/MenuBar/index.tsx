@@ -18,7 +18,7 @@ const Manubar = () => {
         </div>
 
         <GiHamburgerMenu
-          className="hover:animate-spin"
+          className="cursor-pointer hover:animate-pulse"
           color="white"
           size={32}
           onClick={() => setOpen(true)}

@@ -1,13 +1,13 @@
 import "./globals.css";
-import { Caveat } from "next/font/google";
+import { Inter } from "next/font/google";
 import LayoutProps from "@/types/LayoutProps";
 import MenuBar from "@/components/MenuBar";
 import Footer from "@/components/Footer";
 
-const caveat = Caveat({
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-caveat",
+  variable: "--font-inter",
 });
 
 export const metadata = {
@@ -18,7 +18,7 @@ export const metadata = {
 function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <body className={`${caveat.variable} font-sans`}>
+      <body className={`${inter.variable} font-sans`}>
         <MenuBar />
         <div className="h-[calc(100vh-100px)] overflow-y-auto">{children}</div>
         <Footer />
