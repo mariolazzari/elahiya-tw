@@ -6,7 +6,13 @@ const ImageBox = ({ src, alt, width, height }: ImageBoxProps) => {
 
   return (
     <div className={getStyle()}>
-      <Image className="object-cover" src={src} alt={alt} fill />
+      <Image
+        className="object-cover"
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+      />
     </div>
   );
 };

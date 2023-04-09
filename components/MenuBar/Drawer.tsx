@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Options from "./Options";
-import Logo from "@/public/images/elahiya.jpg";
 
 interface DrawerProps {
   open: boolean;
@@ -18,7 +17,13 @@ function Drawer({ open, onClose }: DrawerProps) {
       onClick={onClose}
       onMouseLeave={onClose}
     >
-      <Image className="mb-10 rounded-full" src={Logo} alt="Elahiya" />
+      <Image
+        className="mb-10 rounded-full"
+        src="/images/elahiya.png"
+        alt="Elahiya"
+        width={100}
+        height={100}
+      />
       <Options isDrawer />
     </div>
   );

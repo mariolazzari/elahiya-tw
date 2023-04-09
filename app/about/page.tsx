@@ -7,7 +7,7 @@ const About = () => {
         key={id}
         title="title"
         description="description"
-        imagePath={`/images/card${id}.jpg`}
+        imagePath={`/images/card${id}.png`}
       />
     ));
 
