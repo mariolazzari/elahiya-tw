@@ -32,7 +32,9 @@ const Options = ({ isDrawer = false }) => {
           href={opt.url}
         >
           {opt.icon}
-          <h6 className="ml-1 text-xl font-bold text-white">{opt.label}</h6>
+          <h6 className="ml-1 text-xl text-white hover:scale-110">
+            {opt.label}
+          </h6>
         </Link>
       ))}
     </div>

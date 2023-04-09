@@ -10,7 +10,7 @@ const Manubar = () => {
 
   return (
     <>
-      <nav className="h-[50px] bg-gradient-to-bl from-indigo-400 to-violet-400 flex justify-between items-center px-4">
+      <nav className="h-[50px] bg-gradient-to-br from-violet-400 via-indigo-400 to-purple-400 flex justify-between items-center px-4">
         <Locales />
 
         <div className="invisible md:visible">
