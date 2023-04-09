@@ -1,33 +1,21 @@
-"use client";
-import { useState } from "react";
 import Options from "./Options";
-import { GiHamburgerMenu } from "react-icons/gi";
 import Locales from "./Locales";
 import Drawer from "./Drawer";
 
-const Manubar = () => {
-  const [open, setOpen] = useState(false);
-
+const ManuBar = () => {
   return (
-    <>
-      <nav className="h-[50px] bg-gradient-to-br from-violet-400 via-indigo-400 to-purple-400 flex justify-between items-center px-4">
-        <Locales />
+    <nav className="h-[50px] bg-gradient-to-br from-violet-400 via-indigo-400 to-purple-400 flex justify-between items-center px-4">
+      <Locales />
 
-        <div className="invisible md:visible">
-          <Options />
-        </div>
+      <div className="invisible md:visible">
+        <Options />
+      </div>
 
-        <GiHamburgerMenu
-          className="cursor-pointer hover:animate-pulse"
-          color="white"
-          size={32}
-          onClick={() => setOpen(true)}
-        />
-      </nav>
-
-      <Drawer open={open} onClose={() => setOpen(false)} />
-    </>
+      <Drawer>
+        <Options isDrawer />
+      </Drawer>
+    </nav>
   );
 };
 
-export default Manubar;
+export default ManuBar;

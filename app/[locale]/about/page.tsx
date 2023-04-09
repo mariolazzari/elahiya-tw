@@ -1,5 +1,10 @@
 import CardBox from "@/components/CardBox";
 
+export const metadata = {
+  title: "About - Elahiya",
+  description: "About Elahiya School",
+};
+
 const About = () => {
   const renderImages = () =>
     [1, 2, 3].map(id => (

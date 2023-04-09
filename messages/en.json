@@ -1,0 +1,12 @@
+{
+  "Menu": {
+    "home": "Home",
+    "about": "About us",
+    "map": "Find us"
+  },
+  "Home": {
+    "title": "Fly your dreams with us",
+    "about": "About us",
+    "find": "Find us"
+  }
+}

@@ -1,21 +1,28 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import Option from "@/types/Option";
 import { FcHome, FcAbout, FcSearch } from "react-icons/fc";
 
-const Options = ({ isDrawer = false }) => {
+type OptionsProps = {
+  isDrawer?: boolean;
+};
+
+const Options = ({ isDrawer = false }: OptionsProps) => {
+  const t = useTranslations("Menu");
+
   const options: Option[] = [
     {
-      label: "Home",
+      label: t("home"),
       url: "/",
       icon: <FcHome size={24} />,
     },
     {
-      label: "About us",
+      label: t("about"),
       url: "/about",
       icon: <FcAbout size={24} />,
     },
     {
-      label: "Find us",
+      label: t("map"),
       url: "/map",
       icon: <FcSearch size={24} />,
     },
