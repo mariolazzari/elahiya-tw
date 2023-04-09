@@ -24,7 +24,7 @@ function Drawer({ children }: { children: ReactNode }) {
       onMouseLeave={() => setOpen(false)}
     >
       <Image
-        className="mb-10 rounded-full"
+        className="mx-auto mb-10 rounded-full"
         src="/images/elahiya.png"
         alt="Elahiya"
         width={100}
