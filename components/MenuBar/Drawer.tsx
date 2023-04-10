@@ -9,9 +9,9 @@ function Drawer({ children }: { children: ReactNode }) {
   if (!open) {
     return (
       <GiHamburgerMenu
-        className="cursor-pointer hover:animate-pulse"
+        className="cursor-pointer hover:scale-110"
         color="white"
-        size={32}
+        size={36}
         onClick={() => setOpen(true)}
       />
     );

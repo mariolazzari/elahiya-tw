@@ -17,11 +17,11 @@ const Locales = () => {
       {flags.map(flag => (
         <Image
           key={flag}
-          className="rounded-full cursor-pointer"
+          className="rounded-full cursor-pointer hover:scale-110"
           src={`/flags/${flag}.png`}
           alt={flag}
-          width={32}
-          height={32}
+          width={36}
+          height={36}
           onClick={() => onFlagClick(flag)}
         />
       ))}
