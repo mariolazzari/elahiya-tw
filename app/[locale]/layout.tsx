@@ -1,5 +1,5 @@
 import "../globals.css";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { Inter } from "next/font/google";
 import LayoutProps from "@/types/LayoutProps";
 import MenuBar from "@/components/MenuBar";
@@ -12,8 +12,28 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Elahiya",
-  description: "Elahiya School",
+  title: "Elahiya Pro Language",
+  description:
+    "Elahiya Pro Language school has been providing English languages, TOEFL, IELTS and French classes in Rudehen for 20 years.It is located at the 6th Bustan",
+  themeColor: "violet",
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+  },
 };
 
 const RootLayout = ({ children }: LayoutProps) => {
