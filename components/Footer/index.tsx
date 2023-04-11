@@ -6,7 +6,7 @@ const Footer = () => {
         href="https://mariolazzari.it"
         target="_blank"
       >
-        © Mario Lazzari {new Date().getFullYear()}
+        Mario Lazzari ©{new Date().getFullYear()}
       </a>
     </footer>
   );

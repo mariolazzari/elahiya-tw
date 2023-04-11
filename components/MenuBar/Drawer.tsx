@@ -6,33 +6,33 @@ import { GiHamburgerMenu } from "react-icons/gi";
 function Drawer({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
 
-  if (!open) {
-    return (
+  return (
+    <>
       <GiHamburgerMenu
         className="cursor-pointer hover:scale-110"
         color="white"
         size={36}
         onClick={() => setOpen(true)}
       />
-    );
-  }
 
-  return (
-    <div
-      className="absolute top-0 right-0 z-40 w-40 h-screen p-4 bg-gradient-to-br from-purple-400 via-indigo-400 to-violet-400"
-      onClick={() => setOpen(false)}
-      onMouseLeave={() => setOpen(false)}
-    >
-      <Image
-        className="mx-auto mb-10 rounded-full"
-        src="/images/elahiya.png"
-        alt="Elahiya"
-        width={100}
-        height={100}
-      />
+      {open && (
+        <div
+          className="absolute top-0 right-0 z-40 h-screen p-4 w-52 bg-gradient-to-br from-purple-400 via-indigo-400 to-violet-400"
+          onClick={() => setOpen(false)}
+          onMouseLeave={() => setOpen(false)}
+        >
+          <Image
+            className="mx-auto mb-10 rounded-full"
+            src="/images/elahiya.png"
+            alt="Elahiya"
+            width={100}
+            height={100}
+          />
 
-      {children}
-    </div>
+          {children}
+        </div>
+      )}
+    </>
   );
 }
 
