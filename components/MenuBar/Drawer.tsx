@@ -17,11 +17,13 @@ function Drawer({ children }: { children: ReactNode }) {
 
       {open && (
         <div className="absolute top-0 left-0 z-40 flex h-screen">
-          <div className="opacity-50 w-[calc(100vw-250px)] bg-indigo-300" />
+          <div
+            className="opacity-50 w-[calc(100vw-250px)] bg-indigo-300"
+            onClick={() => setOpen(false)}
+          />
           <div
             className="p-4 w-[250px] bg-gradient-to-br from-purple-400 via-indigo-400 to-violet-400"
             onClick={() => setOpen(false)}
-            onMouseLeave={() => setOpen(false)}
           >
             <Image
               className="mx-auto mb-10 rounded-full"
