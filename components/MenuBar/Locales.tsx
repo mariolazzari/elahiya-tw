@@ -20,8 +20,8 @@ const Locales = () => {
           className="rounded-full cursor-pointer hover:scale-110"
           src={`/flags/${flag}.png`}
           alt={flag}
-          width={36}
-          height={36}
+          width={32}
+          height={32}
           onClick={() => onFlagClick(flag)}
         />
       ))}
