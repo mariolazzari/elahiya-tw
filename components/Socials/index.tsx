@@ -53,7 +53,9 @@ const Socials = () => {
           target="_blank"
         >
           {social.icon}
-          <h2 className="ml-2 text-xl text-indigo-900">{social.name}</h2>
+          <h2 className="ml-2 text-xl font-semibold text-indigo-900">
+            {social.name}
+          </h2>
         </a>
       ))}
     </div>
