@@ -4,8 +4,8 @@ import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 
 const MapBox = () => {
-  const latitude = 35.7315547;
-  const longitude = 51.9012636;
+  const latitude = 35.7319994;
+  const longitude = 51.9010673;
   const apiKey = "EGswGwC8sNX2v1gMT662";
   const zoom = 14;
 
