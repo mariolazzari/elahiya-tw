@@ -1,6 +1,5 @@
 "use client";
-import MapGl, { NavigationControl, Marker } from "react-map-gl";
-import maplibregl from "maplibre-gl";
+import MapGl, { NavigationControl, Marker } from "react-map-gl/maplibre";
 import "maplibre-gl/dist/maplibre-gl.css";
 
 const MapBox = () => {
@@ -11,7 +10,6 @@ const MapBox = () => {
 
   return (
     <MapGl
-      mapLib={maplibregl}
       initialViewState={{
         longitude,
         latitude,
@@ -23,8 +21,8 @@ const MapBox = () => {
       }}
       mapStyle={`https://api.maptiler.com/maps/streets/style.json?key=${apiKey}`}
     >
-      <NavigationControl position="top-left" />
       <Marker latitude={latitude} longitude={longitude} color="purple" />
+      <NavigationControl position="top-left" />
     </MapGl>
   );
 };
