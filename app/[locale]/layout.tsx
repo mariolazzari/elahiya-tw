@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import LayoutProps from "@/types/LayoutProps";
 import MenuBar from "@/components/MenuBar";
 import Footer from "@/components/Footer";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,9 +34,14 @@ export const metadata = {
 
 const RootLayout = ({ children }: LayoutProps) => {
   const locale = useLocale();
+  const gaid = process.env.GA_TRACKING_ID as string;
 
   return (
     <html lang={locale}>
+      <head>
+        <GoogleAnalytics id={gaid} />
+      </head>
+
       <body className={`${inter.variable} font-sans`}>
         <MenuBar />
         <div className="h-[calc(100vh-100px)] overflow-y-auto">{children}</div>
