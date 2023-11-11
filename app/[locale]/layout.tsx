@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Elahiya Pro Language",
   description:
     "Elahiya Pro Language school has been providing English languages, TOEFL, IELTS and French classes in Rudehen for 20 years.It is located at the 6th Bustan",
-  themeColor: "violet",
+  // themeColor: "#553c9a",
 };
 
 const RootLayout = ({ children }: LayoutProps) => {
