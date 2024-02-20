@@ -1,17 +1,33 @@
 import { useTranslations } from "next-intl";
-import MapBox from "@/components/MapBox";
+import { GoogleMapsEmbed } from "@next/third-parties/google";
 
-const Map = () => {
+type MapPageProps = {
+  params: {
+    locale: string;
+  };
+};
+
+const MapPage = ({ params: { locale } }: MapPageProps) => {
   const t = useTranslations("Map");
+  const title = t("title");
+  const apiKey = process.env.MAPS_API || "";
 
   return (
     <div className="flex flex-col items-center justify-center w-full h-full bg-gradient-to-tr from-violet-200 to-indigo-200">
-      <h2 className="mb-4 text-4xl text-center text-indigo-700">
-        {t("title")}
-      </h2>
-      <MapBox />
+      <h2 className="mb-4 text-4xl text-center text-indigo-700">{title}</h2>
+
+      <div className="w-[90vw]">
+        <GoogleMapsEmbed
+          apiKey={apiKey}
+          height={450}
+          width="100%"
+          mode="place"
+          q={title}
+          language={locale}
+        />
+      </div>
     </div>
   );
 };
 
-export default Map;
+export default MapPage;
