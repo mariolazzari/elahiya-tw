@@ -1,4 +1,4 @@
-import "../globals.css";
+import "@/app/globals.css";
 import { useLocale } from "next-intl";
 import { Inter } from "next/font/google";
 import LayoutProps from "@/types/LayoutProps";
