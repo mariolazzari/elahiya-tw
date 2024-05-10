@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import Option from "@/types/Option";
+import { Option } from "@/types/Option";
 import { Home, Info, MapPin } from "lucide-react";
 
 type OptionsProps = {
   isDrawer?: boolean;
 };
 
-const Options = ({ isDrawer = false }: OptionsProps) => {
+export const Options = ({ isDrawer = false }: OptionsProps) => {
   const t = useTranslations("Menu");
 
   const options: Option[] = [
@@ -45,5 +45,3 @@ const Options = ({ isDrawer = false }: OptionsProps) => {
     </div>
   );
 };
-
-export default Options;

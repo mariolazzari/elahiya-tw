@@ -1,11 +1,7 @@
 import { ReactNode } from "react";
 
-interface IOption {
+export type Option = {
   label: string;
   url: string;
   icon?: ReactNode;
-}
-
-type Option = Readonly<IOption>;
-
-export default Option;
+};

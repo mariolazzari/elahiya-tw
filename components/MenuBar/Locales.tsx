@@ -2,7 +2,7 @@
 import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
 
-const Locales = () => {
+export const Locales = () => {
   const path = usePathname();
   const router = useRouter();
   const flags = ["en", "fa"];
@@ -28,5 +28,3 @@ const Locales = () => {
     </div>
   );
 };
-
-export default Locales;

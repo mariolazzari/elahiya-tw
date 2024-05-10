@@ -1,6 +1,6 @@
-import Options from "./Options";
-import Locales from "./Locales";
-import Drawer from "./Drawer";
+import { Options } from "./Options";
+import { Locales } from "./Locales";
+import { Drawer } from "./Drawer";
 
 const ManuBar = () => {
   return (
