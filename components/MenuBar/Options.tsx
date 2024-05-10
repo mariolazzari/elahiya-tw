@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import Option from "@/types/Option";
-import { FcHome, FcAbout, FcSearch } from "react-icons/fc";
+import { Home, Info, MapPin } from "lucide-react";
 
 type OptionsProps = {
   isDrawer?: boolean;
@@ -14,17 +14,17 @@ const Options = ({ isDrawer = false }: OptionsProps) => {
     {
       label: t("home"),
       url: "/",
-      icon: <FcHome size={24} />,
+      icon: <Home />,
     },
     {
       label: t("about"),
       url: "/about",
-      icon: <FcAbout size={24} />,
+      icon: <Info />,
     },
     {
       label: t("map"),
       url: "/map",
-      icon: <FcSearch size={24} />,
+      icon: <MapPin />,
     },
   ];
 
@@ -34,14 +34,12 @@ const Options = ({ isDrawer = false }: OptionsProps) => {
     <div className={className}>
       {options.map(opt => (
         <Link
-          className="flex items-center hover:scale-110"
+          className="flex items-center text-white"
           key={opt.url}
           href={opt.url}
         >
           {opt.icon}
-          <h6 className="ml-1 text-xl text-white hover:scale-110">
-            {opt.label}
-          </h6>
+          <h6 className="ml-2 text-xl text-white">{opt.label}</h6>
         </Link>
       ))}
     </div>

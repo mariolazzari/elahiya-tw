@@ -1,18 +1,18 @@
 import Link from "next/link";
+import { Button } from "../ui/button";
+import { Info, MapPin } from "lucide-react";
 
 const Buttons = () => {
-  const style =
-    "w-32 px-5 py-2 text-xl text-white rounded-full active:scale-90";
   const buttons = [
     {
       link: "/about",
       label: "About us",
-      style: `${style} bg-purple-700 hover:bg-purple-600 active:bg-purple-800`,
+      icon: <Info />,
     },
     {
       link: "/map",
       label: "Find us",
-      style: `${style} bg-indigo-700 active:bg-indigo-800 hover:bg-indigo-600`,
+      icon: <MapPin />,
     },
   ];
 
@@ -20,7 +20,9 @@ const Buttons = () => {
     <div className="flex gap-4 mt-10">
       {buttons.map(button => (
         <Link key={button.link} href={button.link}>
-          <button className={button.style}>{button.label}</button>
+          <Button className="w-32 gap-2">
+            {button.icon} {button.label}
+          </Button>
         </Link>
       ))}
     </div>

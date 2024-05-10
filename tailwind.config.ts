@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
 const config = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-  ],
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+	],
   prefix: "",
   theme: {
     container: {
@@ -52,29 +52,6 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        palette: {
-          blue: "hsl(232, 86%, 60%)",
-          green: "hsl(147, 87%, 44%)",
-          yellow: "hsl(48, 87%, 49%)",
-          orange: "hsl(39, 87%, 49%)",
-          red: "hsl(0, 87%, 49%)",
-          pink: "hsl(324, 87%, 49%)",
-          purple: "hsl(292, 87%, 49%)",
-          blueDark: "hsl(260, 87%, 49%)",
-          blueSea: "hsl(196, 47%, 51%)",
-          greenLight: "hsl(165, 91%, 38%)",
-          blueSky: "hsl(214, 91%, 61%)",
-        },
-        switchButton: {
-          primary_enable: "hsl(231 20% 31%)",
-          primary_disable: "hsl(200, 6%, 91%)",
-          secondary_enable: "#ffffff",
-          secondary_disable: "#6A6B7D",
-        },
-        mainColor: {
-          primary: "hsl(231 20% 31%)",
-          secondary: "hsl(231 20% 31%)",
-        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -94,13 +71,10 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "button-down": "transform rotate-180 ease-linear duration-75",
-        "button-up": "transform rotate-0 ease-linear duration-75",
       },
-      filter: ["hover", "focus"],
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+} satisfies Config
 
-export default config;
+export default config

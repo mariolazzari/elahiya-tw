@@ -1,14 +1,14 @@
 "use client";
 import { ReactNode, useState } from "react";
 import Image from "next/image";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { Menu } from "lucide-react";
 
 function Drawer({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      <GiHamburgerMenu
+      <Menu
         className="cursor-pointer hover:scale-110"
         color="white"
         size={36}
