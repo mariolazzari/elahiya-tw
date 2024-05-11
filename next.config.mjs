@@ -6,7 +6,6 @@ const withNextIntl = createNextIntlPlugin("./i18n.ts");
 const nextConfig = withNextIntl({
   env: {
     GA_TRACKING_ID: "GTM-T646789",
-    MAPS_API: "AIzaSyAclhKDkKxaSSgpE_Zsva0VOl_leycLSdE",
   },
 });
 
