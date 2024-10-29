@@ -20,7 +20,7 @@ export function Drawer({ children }: DrawerProps) {
   return (
     <Sheet>
       <SheetTrigger>
-        <Menu color="white" />
+        <Menu color="white" aria-label="Menu" />
       </SheetTrigger>
 
       <SheetContent className="p-4 w-[250px] bg-gradient-to-br from-purple-400 via-indigo-400 to-violet-400">
