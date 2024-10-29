@@ -1,9 +1,8 @@
 import { ReactNode } from "react";
 
-interface ILayoutProps {
+export type LayoutProps = Readonly<{
   children: ReactNode;
-}
-
-type LayoutProps = Readonly<ILayoutProps>;
-
-export default LayoutProps;
+  params: {
+    locale: string;
+  };
+}>;

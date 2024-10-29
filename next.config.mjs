@@ -1,12 +1,12 @@
-/** @type {import('next').NextConfig} */
 import createNextIntlPlugin from "next-intl/plugin";
 
-const withNextIntl = createNextIntlPlugin("./i18n.ts");
+const withNextIntl = createNextIntlPlugin();
 
-const nextConfig = withNextIntl({
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   env: {
     GA_TRACKING_ID: "GTM-T646789",
   },
-});
+};
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

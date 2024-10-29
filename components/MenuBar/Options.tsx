@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
+import { useTranslations, useLocale } from "next-intl";
 import { Option } from "@/types/Option";
 import { Home, Info, MapPin } from "lucide-react";
 
@@ -9,6 +9,7 @@ type OptionsProps = {
 
 export const Options = ({ isDrawer = false }: OptionsProps) => {
   const t = useTranslations("Menu");
+  const locale = useLocale();
 
   const options: Option[] = [
     {
@@ -28,18 +29,17 @@ export const Options = ({ isDrawer = false }: OptionsProps) => {
     },
   ];
 
-  const className = isDrawer ? "flex flex-col gap-8" : "flex gap-8";
-
   return (
-    <div className={className}>
+    <div className={isDrawer ? "flex flex-col gap-8" : "flex gap-8"}>
       {options.map(opt => (
         <Link
           className="flex items-center text-white"
           key={opt.url}
           href={opt.url}
+          locale={locale}
         >
           {opt.icon}
-          <h6 className="ml-2 text-xl text-white">{opt.label}</h6>
+          <span className="ml-2">{opt.label}</span>
         </Link>
       ))}
     </div>
